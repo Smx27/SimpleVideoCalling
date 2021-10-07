@@ -1,84 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Video Calling Site</title>
 </head>
+
 <body>
     <div class="containner">
 
     </div>
     <script src="https://sdk.videosdk.live/rtc-js-prebuilt/0.1.5/rtc-js-prebuilt.js"></script>
-    <script >
-    
-  var script = document.createElement("script");
-  script.type = "text/javascript";
+    <script>
 
-  script.addEventListener("load", function (event) {
-    const meeting = new VideoSDKMeeting();
+        var script = document.createElement("script");
+        script.type = "text/javascript";
 
-    const config = {
-      name: "John Doe",
-      apiKey: "ba0ca881-5817-43fa-a71d-5ee29aa6efa3", // generated in Setup
-      meetingId: "milkyway", // enter your meeting id
+        script.addEventListener("load", function (event) {
+            const meeting = new VideoSDKMeeting();
 
-      containerId: null,
-      redirectOnLeave: "https://www.videosdk.live/",
+            const config = {
+                name: "Sumit Maiti",
+                apiKey: "ba0ca881-5817-43fa-a71d-5ee29aa6efa3",
+                meetingId: "Test1",
 
-      micEnabled: true,
-      webcamEnabled: true,
-      participantCanToggleSelfWebcam: true,
-      participantCanToggleSelfMic: true,
+                containerId: null,
+                redirectOnLeave: "https://www.instagram.com/smx2_7/",
 
-      chatEnabled: true,
-      screenShareEnabled: true,
-      pollEnabled: true,
-      whiteBoardEnabled: true,
-      raiseHandEnabled: true,
+                micEnabled: true,
+                webcamEnabled: true,
+                participantCanToggleSelfWebcam: true,
+                participantCanToggleSelfMic: true,
 
-      recordingEnabled: true,
-      recordingWebhookUrl: "https://www.videosdk.live/callback",
-      participantCanToggleRecording: true,
+                chatEnabled: true,
+                screenShareEnabled: true,
+                pollEnabled: true,
+                whiteBoardEnabled: true,
+                raiseHandEnabled: true,
 
-      brandingEnabled: true,
-      brandLogoURL: "https://picsum.photos/200",
-      brandName: "Awesome startup",
-      poweredBy: true,
+                recordingEnabled: true,
+                recordingWebhookUrl: "https://www.videosdk.live/callback",
+                participantCanToggleRecording: true,
 
-      participantCanLeave: true, // if false, leave button won't be visible
+                brandingEnabled: true,
+                brandLogoURL: "https://picsum.photos/200",
+                brandName: "Created by SMX27",
+                poweredBy: false,
 
-      // Live stream meeting to youtube
-      livestream: {
-        autoStart: true,
-        outputs: [
-          // {
-          //   url: "rtmp://x.rtmp.youtube.com/live2",
-          //   streamKey: "<STREAM KEY FROM YOUTUBE>",
-          // },
-        ],
-      },
+                participantCanLeave: true,
 
-      permissions: {
-        askToJoin: false, // Ask joined participants for entry in meeting
-        toggleParticipantMic: true, // Can toggle other participant's mic
-        toggleParticipantWebcam: true, // Can toggle other participant's webcam
-      },
 
-      joinScreen: {
-        visible: true, // Show the join screen ?
-        title: "Daily scrum", // Meeting title
-        meetingUrl: window.location.href, // Meeting joining url
-      },
-    };
+                livestream: {
+                    autoStart: true,
+                    outputs: [
+                        // {
+                        //   url: "rtmp://x.rtmp.youtube.com/live2",
+                        //   streamKey: "<STREAM KEY FROM YOUTUBE>",
+                        // },
+                    ],
+                },
 
-    meeting.init(config);
-  });
+                permissions: {
+                    askToJoin: false,
+                    toggleParticipantMic: false, 
+                    toggleParticipantWebcam: false, 
+                },
 
-  script.src =
-    "https://sdk.videosdk.live/rtc-js-prebuilt/0.1.5/rtc-js-prebuilt.js";
-  document.getElementsByTagName("head")[0].appendChild(script);
+                joinScreen: {
+                    visible: true,
+                    title: "Hello Friends Chai Peelo!",
+                    meetingUrl: window.location.href,
+                },
+            };
+
+            meeting.init(config);
+        });
+
+        script.src =
+            "https://sdk.videosdk.live/rtc-js-prebuilt/0.1.5/rtc-js-prebuilt.js";
+        document.getElementsByTagName("head")[0].appendChild(script);
 
     </script>
 </body>
+
 </html>
